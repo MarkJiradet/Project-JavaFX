@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PurchaseController">
+   <children>
+      <ImageView fitHeight="64.0" fitWidth="68.0" layoutX="173.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../picture/checked.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="96.0" layoutY="104.0" text="Payment Successful" textFill="#32ba7c">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="173.0" prefHeight="16.0" prefWidth="89.0" text="Payment type" textFill="#565656">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="199.0" prefHeight="16.0" prefWidth="89.0" text="Bank" textFill="#565656">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="251.0" prefHeight="16.0" prefWidth="89.0" text="Mobile" textFill="#565656">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="277.0" prefHeight="16.0" prefWidth="89.0" text="Email" textFill="#565656">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="225.0" prefHeight="16.0" prefWidth="89.0" text="Name" textFill="#565656">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="314.0" prefHeight="22.0" prefWidth="103.0" text="Amount paid" textFill="#565656">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="358.0" prefHeight="16.0" prefWidth="110.0" text="Transaction id" textFill="#565656">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="BASELINE_RIGHT" layoutX="296.0" layoutY="173.0" prefHeight="16.0" prefWidth="80.0" text="Net banking">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="BASELINE_RIGHT" layoutX="296.0" layoutY="199.0" prefHeight="16.0" prefWidth="80.0" text="K-Bank">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelName" alignment="BASELINE_RIGHT" layoutX="170.0" layoutY="225.0" prefHeight="16.0" prefWidth="206.0" text="Firstname Lastname">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelPhone" alignment="BASELINE_RIGHT" layoutX="170.0" layoutY="251.0" prefHeight="16.0" prefWidth="206.0" text="Telephone">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelEmail" alignment="BASELINE_RIGHT" layoutX="170.0" layoutY="277.0" prefHeight="16.0" prefWidth="206.0" text="Email">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelTotal" alignment="BASELINE_RIGHT" layoutX="170.0" layoutY="314.0" prefHeight="22.0" prefWidth="206.0" text="500.00">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="LabelTID" alignment="BASELINE_RIGHT" layoutX="170.0" layoutY="358.0" prefHeight="16.0" prefWidth="206.0" text="Telephone">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

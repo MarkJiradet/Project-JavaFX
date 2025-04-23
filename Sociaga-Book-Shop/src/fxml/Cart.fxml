@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CartController">
+   <children>
+      <Pane layoutX="-1.0" prefHeight="92.0" prefWidth="1001.0" style="-fx-background-color: #FFD898;">
+         <children>
+            <HBox layoutX="349.0" layoutY="-2.0" prefHeight="100.0" prefWidth="654.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnCartoon" prefHeight="92.0" prefWidth="174.0" stylesheets="@../CSS/btnDashboard.css" text="Cartoon" textFill="WHITE">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnNovel" prefHeight="92.0" prefWidth="194.0" stylesheets="@../CSS/btnDashboard.css" text="Novel" textFill="WHITE">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnEducation" prefHeight="92.0" prefWidth="194.0" stylesheets="@../CSS/btnDashboard.css" text="Education" textFill="WHITE">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="81.0" prefWidth="92.0" style="-fx-border-color: #FFD898;">
+                     <stylesheets>
+                        <URL value="@../CSS/btnSearch.css" />
+                        <URL value="@../CSS/btnSignin.css" />
+                     </stylesheets>
+                     <padding>
+                        <Insets left="1.0" top="1.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="15.0" top="7.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="57.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Pictures/shopping-cart%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <ImageView fitHeight="92.0" fitWidth="90.0" layoutX="9.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Pictures/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="118.0" layoutY="117.0" onMouseClicked="#rowClick" prefHeight="466.0" prefWidth="762.0" stylesheets="@../CSS/btnDashboard.css">
+         <columns>
+            <TableColumn fx:id="col_id" prefWidth="100.0" text="ID" />
+            <TableColumn fx:id="col_name" prefWidth="290.0" text="Book name" />
+            <TableColumn fx:id="col_author" prefWidth="120.0" text="Author" />
+            <TableColumn fx:id="col_publisher" prefWidth="150.0" text="Publisher" />
+            <TableColumn fx:id="col_price" prefWidth="100.0" text="Price" />
+         </columns>
+      </TableView>
+      <Button layoutX="602.0" layoutY="625.0" mnemonicParsing="false" onAction="#btnDelete" prefHeight="51.0" prefWidth="110.0" stylesheets="@../CSS/btnDelete.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="748.0" layoutY="625.0" mnemonicParsing="false" onAction="#btnPurchase" prefHeight="51.0" prefWidth="131.0" stylesheets="@../CSS/btnAdd.css" text="Purchase" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="118.0" layoutY="625.0" text="Total Price :">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTotal" layoutX="269.0" layoutY="625.0" prefHeight="40.0" prefWidth="170.0" text="0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="377.0" layoutY="625.0" text="Baht">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

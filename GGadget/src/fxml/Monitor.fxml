@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#refresh" prefHeight="700.0" prefWidth="936.0" style="-fx-background-color: #26242D;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MonitorController">
+   <children>
+      <Pane layoutX="5.0" layoutY="-2.0" prefHeight="701.0" prefWidth="234.0" style="-fx-background-color: #211F27;">
+         <children>
+            <ImageView fitHeight="132.0" fitWidth="161.0" layoutX="41.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/Logo.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="-6.0" layoutY="190.0" prefHeight="451.0" prefWidth="241.0">
+               <children>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnMouse" prefHeight="60.0" prefWidth="240.0" stylesheets="@../CSS/tableview.css" text=" Mouse" textFill="#b4b2bc">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="59.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../picture/mouse.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="60.0" prefWidth="240.0" stylesheets="@../CSS/tableview.css" text=" Monitor" textFill="#b4b2bc">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../picture/desktop.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnHeadphone" prefHeight="60.0" prefWidth="240.0" stylesheets="@../CSS/tableview.css" text=" Headphone" textFill="#b4b2bc">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../picture/headphones.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnKeyboard" prefHeight="60.0" prefWidth="240.0" stylesheets="@../CSS/tableview.css" text=" Keyboard" textFill="#b4b2bc">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../picture/keyboard%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnFlash" prefHeight="60.0" prefWidth="240.0" stylesheets="@../CSS/tableview.css" text=" Flash Drive" textFill="#b4b2bc">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../picture/flashdrive.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="263.0" layoutY="105.0" onMouseClicked="#rowClick" prefHeight="402.0" prefWidth="646.0" stylesheets="@../CSS/tableview.css">
+         <columns>
+            <TableColumn fx:id="col_id" prefWidth="100.0" text="ID" />
+            <TableColumn fx:id="col_name" prefWidth="300.0" text="Product Name" />
+            <TableColumn fx:id="col_brand" prefWidth="120.0" text="Brand" />
+            <TableColumn fx:id="col_price" prefWidth="120.0" text="Price" />
+         </columns>
+      </TableView>
+      <TextField fx:id="text_id" layoutX="263.0" layoutY="535.0" prefHeight="40.0" prefWidth="206.0" promptText="Enter id" stylesheets="@../CSS/textfield_label.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="text_name" layoutX="483.0" layoutY="535.0" prefHeight="40.0" prefWidth="427.0" promptText="Enter product name" stylesheets="@../CSS/textfield_label.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="text_brand" layoutX="263.0" layoutY="603.0" prefHeight="40.0" prefWidth="194.0" promptText="Enter brand" stylesheets="@../CSS/textfield_label.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="text_price" layoutX="469.0" layoutY="603.0" prefHeight="40.0" prefWidth="194.0" promptText="Enter price" stylesheets="@../CSS/textfield_label.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="text_search" layoutX="633.0" layoutY="58.0" prefHeight="35.0" prefWidth="275.0" promptText="Search" stylesheets="@../CSS/textfield_label.css">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </TextField>
+      <Button layoutX="674.0" layoutY="603.0" mnemonicParsing="false" onAction="#btnAdd" prefHeight="40.0" prefWidth="74.0" stylesheets="@../CSS/btnAdd.css" text="ADD" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="754.0" layoutY="603.0" mnemonicParsing="false" onAction="#btnEdit" prefHeight="40.0" prefWidth="74.0" stylesheets="@../CSS/btnEdit.css" text="EDIT" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="833.0" layoutY="603.0" mnemonicParsing="false" onAction="#btnDelete" prefHeight="40.0" prefWidth="85.0" stylesheets="@../CSS/btnDelete.css" text="DELETE" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="862.0" layoutY="60.0" mnemonicParsing="false" onAction="#btnSearch" prefHeight="2.0" prefWidth="30.0" stylesheets="@../CSS/btnSearch.css">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/magnifier.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="282.0" layoutY="26.0" text="Monitor" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="52.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

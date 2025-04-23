@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#refreshTable" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LaptopController">
+   <children>
+      <TableView fx:id="tableLaptop" layoutX="326.0" layoutY="82.0" onMouseClicked="#rowSelect" prefHeight="436.0" prefWidth="748.0" stylesheets="@../styleCSS/tableview.css">
+         <columns>
+            <TableColumn fx:id="col_id_l" prefWidth="93.60003662109375" style="-fx-font-size: 15;" text="รหัสสินค้า" />
+            <TableColumn fx:id="col_name_l" prefWidth="335.1999816894531" style="-fx-font-size: 15;" text="ชื่อสินค้า" />
+            <TableColumn fx:id="col_brand_l" prefWidth="112.0" style="-fx-font-size: 15;" text="แบรนด์สินค้า" />
+            <TableColumn fx:id="col_size_l" prefWidth="99.20001220703125" style="-fx-font-size: 15;" text="ขนาดหน้าจอ" />
+            <TableColumn fx:id="col_price_l" prefWidth="105.0" style="-fx-font-size: 15;" text="ราคา" />
+         </columns>
+      </TableView>
+      <Button layoutX="727.0" layoutY="629.0" mnemonicParsing="false" onAction="#btnAdd_laptop" prefHeight="38.0" prefWidth="88.0" stylesheets="@../styleCSS/buttonAdd.css" text="Save" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/diskette.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8842105269432068" green="0.8842105269432068" blue="0.8842105269432068" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button layoutX="827.0" layoutY="629.0" mnemonicParsing="false" onAction="#btnEdit_laptop" prefHeight="38.0" prefWidth="88.0" stylesheets="@../styleCSS/buttonEdit.css" text="Edit" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/edit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.8736842274665833" green="0.8736842274665833" blue="0.8736842274665833" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <TextField fx:id="text_search_laptop" layoutX="714.0" layoutY="47.0" prefHeight="26.0" prefWidth="314.0" promptText="ค้นหา">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="926.0" layoutY="629.0" mnemonicParsing="false" onAction="#btnDelete_laptop" prefHeight="38.0" prefWidth="94.0" stylesheets="@../styleCSS/buttonDelete.css" text="Delete" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/bin.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.7684210538864136" green="0.7684210538864136" blue="0.7684210538864136" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button layoutX="1036.0" layoutY="47.0" mnemonicParsing="false" onAction="#btnSearch_laptop">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/magnifier.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <VBox prefHeight="700.0" prefWidth="293.0" style="-fx-background-color: #6698FF;">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/LogoAdmin.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="40.0" top="15.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.025925925001502037" green="0.5129629373550415" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnSceneMAA" prefHeight="58.0" prefWidth="294.0" stylesheets="@../styleCSS/tableview.css" text="Manage Administrator Account" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnScenePhone" prefHeight="59.0" prefWidth="294.0" stylesheets="@../styleCSS/tableview.css" text="Smart Phone" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="58.0" prefWidth="294.0" stylesheets="@../styleCSS/tableview.css" text="Laptop" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnSceneGG" prefHeight="59.0" prefWidth="294.0" stylesheets="@../styleCSS/tableview.css" text="Gaming Gear" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TextField fx:id="text_id_laptop" layoutX="387.0" layoutY="559.0" prefHeight="30.0" prefWidth="160.0" promptText="รหัสสินค้า">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="text_price_laptop" layoutX="555.0" layoutY="636.0" prefHeight="30.0" prefWidth="126.0" promptText="ราคา">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="text_name_laptop" layoutX="596.0" layoutY="559.0" prefHeight="30.0" prefWidth="234.0" promptText="ชื่อสินค้า">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="text_brand_laptop" layoutX="877.0" layoutY="559.0" prefHeight="30.0" prefWidth="150.0" promptText="แบรนด์สินค้า">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="text_size_laptop" layoutX="387.0" layoutY="636.0" prefHeight="30.0" prefWidth="125.0" promptText="ขนาดหน้าจอ">
+         <font>
+            <Font name="Tahoma" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="431.0" layoutY="533.0" text="รหัสสินค้า">
+         <font>
+            <Font name="Tahoma Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="682.0" layoutY="533.0" text="ชื่อสินค้า">
+         <font>
+            <Font name="Tahoma Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="906.0" layoutY="533.0" text="แบรนด์สินค้า">
+         <font>
+            <Font name="Tahoma Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="403.0" layoutY="612.0" text="ขนาดหน้าจอ">
+         <font>
+            <Font name="Tahoma Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="612.0" text="ราคา">
+         <font>
+            <Font name="Tahoma Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="335.0" layoutY="28.0" text="Laptop">
+         <font>
+            <Font name="Tahoma Bold" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startY="0.5227273160761053">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.7647058963775635" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9969278033794164">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="0.10980392247438431" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="0.10980392247438431" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>

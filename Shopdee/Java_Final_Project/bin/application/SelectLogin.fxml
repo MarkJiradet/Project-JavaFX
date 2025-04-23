@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #8ED6FF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SelectLoginController">
+   <children>
+      <Button layoutX="74.0" layoutY="216.0" mnemonicParsing="false" onAction="#member_login" prefHeight="51.0" prefWidth="251.0" stylesheets="@../styleCSS/buttonOrange.css" text="Member Login" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee UI" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="74.0" layoutY="294.0" mnemonicParsing="false" onAction="#admin_login" prefHeight="51.0" prefWidth="251.0" stylesheets="@../styleCSS/buttonOrange.css" text="Admin Login" textFill="WHITE">
+         <font>
+            <Font name="Leelawadee UI" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="164.0" fitWidth="242.0" layoutX="79.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../picture/Logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

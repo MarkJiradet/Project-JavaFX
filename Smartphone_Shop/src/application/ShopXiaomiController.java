@@ -1,0 +1,120 @@
+package application;
+
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.information.hql.entity.Cart;
+import com.information.hql.entity.Xiaomi;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+
+import javafx.scene.input.MouseEvent;
+
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.TableColumn;
+
+public class ShopXiaomiController implements Initializable{
+	@FXML
+	private TableView<Xiaomi>table;
+	@FXML
+	private TableColumn <Xiaomi,String>col_id;
+	@FXML
+	private TableColumn <Xiaomi,String>col_name;
+	@FXML
+	private TableColumn <Xiaomi,String>col_brand;
+	@FXML
+	private TableColumn<Xiaomi,String> col_size;
+	@FXML
+	private TableColumn <Xiaomi,Integer>col_price;
+	
+	Main m = new Main();
+	Cart c;
+	
+	@Override
+	public void initialize(URL url,ResourceBundle rb) {
+		try {
+			SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Xiaomi.class).buildSessionFactory();
+			Session session = factory.getCurrentSession();
+			session.beginTransaction();
+			List<Xiaomi>xiaomi = session.createQuery("from Xiaomi").list();
+			ObservableList<Xiaomi>xiaomiList = FXCollections.observableArrayList(xiaomi);
+			session.getTransaction().commit();
+			
+			col_id.setCellValueFactory(new PropertyValueFactory<Xiaomi,String>("id_x"));
+			col_name.setCellValueFactory(new PropertyValueFactory<Xiaomi,String>("name_x"));
+			col_brand.setCellValueFactory(new PropertyValueFactory<Xiaomi,String>("brand_x"));
+			col_size.setCellValueFactory(new PropertyValueFactory<Xiaomi,String>("size_x"));
+			col_price.setCellValueFactory(new PropertyValueFactory<Xiaomi,Integer>("price_x"));
+			
+			table.setItems(xiaomiList);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@FXML
+	public void btnAddCart(ActionEvent event) {
+		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Cart.class).buildSessionFactory();
+		Session session = factory.getCurrentSession();
+		try {
+			//start a transaction
+			session = factory.getCurrentSession();
+			session.beginTransaction();
+			
+			session.save(c);
+		
+			//commit transaction
+			session.getTransaction().commit();
+		}finally {
+			Alert a = new Alert(Alert.AlertType.NONE,"เพิ่ม "+c.getName_c()+" เข้าสู่ตะกร้าสำเร็จ",ButtonType.OK);
+			a.show();
+			initialize(null,null);
+			factory.close();
+		}
+	}
+
+	@FXML
+	public void refresh(MouseEvent event) {
+		initialize(null, null);
+	}
+
+	@FXML
+	public void rowClick(MouseEvent event) {
+		Xiaomi click = table.getSelectionModel().getSelectedItem();
+		c = new Cart(click.getId_x(),click.getName_x(),click.getBrand_x(),click.getSize_x(),click.getPrice_x());
+	}
+	
+	@FXML
+	public void btnCart(ActionEvent event) throws IOException{
+		m.changeScene("/fxml/Cart.fxml");
+	}
+	@FXML
+	public void btnApple(ActionEvent event) throws IOException{
+		m.changeScene("/fxml/ShopApple.fxml");
+	}
+
+	@FXML
+	public void btnHuawei(ActionEvent event) throws IOException{
+		m.changeScene("/fxml/ShopHuawei.fxml");
+	}
+
+	@FXML
+	public void btnSamsung(ActionEvent event) throws IOException{
+		m.changeScene("/fxml/ShopSamsung.fxml");
+	}
+	
+}

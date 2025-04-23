@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <TextField fx:id="text_email" layoutX="48.0" layoutY="207.0" prefHeight="50.0" prefWidth="304.0" promptText="Email" style="-fx-border-color: #DDDDDD; -fx-border-radius: 70;" stylesheets="@../css/textfield.css">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="text_password" layoutX="48.0" layoutY="276.0" prefHeight="50.0" prefWidth="304.0" promptText="Password" style="-fx-border-color: #DDDDDD; -fx-border-radius: 70;" stylesheets="@../css/textfield.css">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </TextField>
+      <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="303.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../picture/mail.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="29.0" layoutX="303.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../picture/padlock.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="107.0" layoutY="345.0" mnemonicParsing="false" onAction="#btnLogin" prefHeight="44.0" prefWidth="185.0" stylesheets="@../css/btnLogin.css" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="21.0" />
+         </font>
+      </Button>
+      <Button layoutX="288.0" layoutY="456.0" mnemonicParsing="false" onAction="#btnSignup" prefHeight="29.0" prefWidth="88.0" stylesheets="@../css/btnSignUp.css" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="178.0" layoutY="459.0" prefHeight="22.0" prefWidth="109.0" text="Not a member?" textFill="#c9c9c9">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="239.0" fitWidth="204.0" layoutX="98.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../picture/Logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
