@@ -9,5 +9,12 @@ This repository contains several GUI-based Java applications developed using **J
 ## 🗂️ Project Structure
 
 Each subfolder represents a separate project:
-
-Project-JavaFX/ ├── CatHotel/ ├── GGadget/ ├── Shopdee/ ├── Skinvy/ ├── Smartphone_Shop/ └── Sociaga-Book-Shop/
+```
+Project-JavaFX/
+├── CatHotel/
+├── GGadget/
+├── Shopdee/
+├── Skinvy/
+├── Smartphone_Shop/
+└── Sociaga-Book-Shop/
+```
